@@ -1,0 +1,205 @@
+{
+  "_ведёт": "Илон держит оболочку (mission/unit/funnel/tasks). Каждый агент на /statusup правит СВОЙ блок в agents[]: status, last_active, impact (вклад в воронку), output (черновой счётчик). Имён учеников на экране НЕ должно быть (152-ФЗ).",
+  "updated": "2026-07-02",
+  "phase": "Лето 2026",
+  "week": 27,
+  "mission": { "label": "живые ученики онлайн", "current": 0, "target": 10, "trend": [0, 0, 0, 1, 1, 2] },
+  "unit": {
+    "tiles": [
+      { "label": "активные ученики", "value": 0 },
+      { "label": "в воронке", "value": 3 },
+      { "label": "пробные / нед", "value": 0, "target": 2, "northstar": true },
+      { "label": "доход / мес", "value": 0, "unit": "₽" },
+      { "label": "постов / нед", "value": 2 },
+      { "label": "видео снято", "value": 4 }
+    ],
+    "prices": [
+      { "label": "урок", "value": 2000, "unit": "₽" },
+      { "label": "спринт (6 ур.)", "value": 9900, "unit": "₽" },
+      { "label": "индивид / мес", "value": 12000, "unit": "₽" }
+    ]
+  },
+  "funnel": [
+    { "name": "лид", "n": 12 },
+    { "name": "ответ", "n": 0 },
+    { "name": "пробный", "n": 0 },
+    { "name": "платит", "n": 0 }
+  ],
+  "agents": [
+    {
+      "id": "ilon", "name": "Илон", "glyph": "🧭", "role": "оркестратор · аналитик", "stream": "core",
+      "status": "active", "last_active": "2026-07-02", "is_personal": false, "depth_lines": 189,
+      "caption": "правая рука D: сводит систему, ставит приказы, ведёт unit-экономику",
+      "impact": [
+        { "label": "систем на проде", "value": 2, "funnel": true },
+        { "label": "задач закрыто", "value": 5 }
+      ],
+      "output": [
+        { "label": "панель + ТЗ", "cnt": 3 }
+      ],
+      "subs": [
+        { "name": "оркестратор", "caption": "приказы, ШТАБ, сведение отчётов" },
+        { "name": "аналитик (§8)", "caption": "unit-экономика, эта панель, прогноз" }
+      ]
+    },
+    {
+      "id": "atlas", "name": "Атлас", "glyph": "📣", "role": "маркетинг · продюсер", "stream": "контент",
+      "status": "active", "last_active": "2026-07-02", "is_personal": false, "depth_lines": 365,
+      "caption": "стратег рынка + продюсер контента и видео-завода",
+      "impact": [
+        { "label": "лидов приведено", "value": 12, "funnel": true },
+        { "label": "каналов запущено", "value": 3 }
+      ],
+      "output": [
+        { "label": "документы стратегии", "cnt": 75 },
+        { "label": "ТЗ агентам", "cnt": 5 }
+      ],
+      "subs": [
+        { "name": "стратег рынка", "caption": "Tavily-рисёрч, гипотезы, позиционирование" },
+        { "name": "продюсер", "caption": "видео-завод, контент-форматы" },
+        { "name": "навигатор набора", "caption": "воронка 📞, три сегмента лета" }
+      ]
+    },
+    {
+      "id": "lemma", "name": "Лемма", "glyph": "✨", "role": "дизайн · голос", "stream": "контент",
+      "status": "idle", "last_active": "2026-06-28", "is_personal": false, "depth_lines": 143,
+      "caption": "публичный голос бренда + весь визуал и бренд-кит",
+      "impact": [
+        { "label": "визуалов опубликовано", "value": 12, "funnel": true },
+        { "label": "постов оформлено", "value": 4 }
+      ],
+      "output": [
+        { "label": "визуалы PNG (всего)", "cnt": 171 },
+        { "label": "макеты HTML (черновики)", "cnt": 65 }
+      ],
+      "subs": [
+        { "name": "дизайн", "caption": "обложки, карточки, бренд-кит" },
+        { "name": "голос Лемма", "caption": "посты и бот (🧬 ЯДРО ГОЛОСА)" }
+      ]
+    },
+    {
+      "id": "metodist", "name": "Методист", "glyph": "🧩", "role": "методика · банк", "stream": "продукт",
+      "status": "idle", "last_active": "2026-07-02", "is_personal": false, "depth_lines": 185,
+      "caption": "чему учить, из чего: печатные материалы + данные для бота",
+      "impact": [
+        { "label": "уроков готовых", "value": 2, "funnel": true },
+        { "label": "диагностик", "value": 1 }
+      ],
+      "output": [
+        { "label": "банк-архетипов", "cnt": 465 },
+        { "label": "печатные страницы", "cnt": 135 }
+      ],
+      "subs": [
+        { "name": "Конструктор", "caption": "собирает карточки и уроки" },
+        { "name": "Решатель", "caption": "проверка ответов (SymPy/Wolfram)" },
+        { "name": "Хранитель", "caption": "банк задач BANK.jsonl" }
+      ]
+    },
+    {
+      "id": "koder", "name": "Кодер", "glyph": "💻", "role": "веб · бот", "stream": "продукт",
+      "status": "active", "last_active": "2026-07-02", "is_personal": false, "depth_lines": 276,
+      "caption": "веб-интерактивы (Pages) + Python-бот на VPS 24/7",
+      "impact": [
+        { "label": "веб на проде", "value": 7, "funnel": true },
+        { "label": "бот 24/7", "value": 1, "unit": "✓" }
+      ],
+      "output": [
+        { "label": "веб-проекты (всего)", "cnt": 15 },
+        { "label": "бот-модули .py", "cnt": 15 }
+      ],
+      "subs": [
+        { "name": "Кодер-бот", "caption": "vk_bot, Python, VPS 24/7" },
+        { "name": "Кодер-веб", "caption": "домашки/интерактивы, GitHub Pages" }
+      ]
+    },
+    {
+      "id": "norma", "name": "Норма", "glyph": "⚖️", "role": "бизнес · право", "stream": "трафик",
+      "status": "idle", "last_active": "2026-06-20", "is_personal": false, "depth_lines": 325,
+      "caption": "самозанятость, 152-ФЗ, оферта, цены-юридика",
+      "impact": [
+        { "label": "правовых узлов закрыто", "value": 0, "funnel": true }
+      ],
+      "output": [
+        { "label": "документы/шаблоны", "cnt": 6 }
+      ],
+      "subs": []
+    },
+    {
+      "id": "amur", "name": "Амур", "glyph": "♥️", "role": "состояние · баланс", "stream": "личный",
+      "status": "active", "last_active": "2026-07-02", "is_personal": true, "depth_lines": 193,
+      "caption": "психолог состояния и контакта (приватное 🔒 скрыто)",
+      "impact": [], "output": [], "subs": []
+    },
+    {
+      "id": "apollo", "name": "Аполлон", "glyph": "💪", "role": "тело · движение", "stream": "личный",
+      "status": "idle", "last_active": "2026-06-25", "is_personal": true, "depth_lines": 186,
+      "caption": "тренер тела и осанки (биометрия 🔒 скрыта)",
+      "impact": [], "output": [], "subs": []
+    },
+    {
+      "id": "hermes", "name": "Гермес", "glyph": "🗣", "role": "английский", "stream": "личный",
+      "status": "idle", "last_active": "2026-06-15", "is_personal": true, "depth_lines": 63,
+      "caption": "живой собеседник по разговорному английскому",
+      "impact": [], "output": [], "subs": []
+    }
+  ],
+  "pipelines": [
+    {
+      "id": "lead", "name": "Лид-воронка", "stream": "трафик", "caption": "объявление → диалог → пробный → запись",
+      "stages": [
+        { "ord": 1, "name": "Авито / Profi", "owner_id": "atlas", "output": "объявление + слайды", "status": "ok" },
+        { "ord": 2, "name": "ЛС / бот", "owner_id": "koder", "output": "диалог + диагностика 8→9", "status": "live" },
+        { "ord": 3, "name": "Бесплатный пробный", "owner_id": null, "output": "первое касание вживую", "status": "wait" },
+        { "ord": 4, "name": "Запись", "owner_id": null, "output": "платящий ученик", "status": "wait" }
+      ]
+    },
+    {
+      "id": "content", "name": "Контент-конвейер", "stream": "контент", "caption": "идея → визуал → финал → публикация",
+      "stages": [
+        { "ord": 1, "name": "Идея / стратегия", "owner_id": "atlas", "output": "тема + угол поста", "status": "ok" },
+        { "ord": 2, "name": "Визуал + голос", "owner_id": "lemma", "output": "макет + текст", "status": "ok" },
+        { "ord": 3, "name": "Финал (text-edit)", "owner_id": null, "output": "вычищенный текст", "status": "ok" },
+        { "ord": 4, "name": "Публикация", "owner_id": "atlas", "output": "ТГ · ВК · Max", "status": "live" }
+      ]
+    },
+    {
+      "id": "lesson", "name": "Урок / веб-ДЗ", "stream": "продукт", "caption": "методика → сборка → прод → отчёт",
+      "stages": [
+        { "ord": 1, "name": "ТЗ + методика", "owner_id": "metodist", "output": "что в домашке, механики", "status": "ok" },
+        { "ord": 2, "name": "Сборка веб", "owner_id": "koder", "output": "index.html + JSON", "status": "ok" },
+        { "ord": 3, "name": "Прод (Pages)", "owner_id": null, "output": "ссылка ученику", "status": "live" },
+        { "ord": 4, "name": "Авто-отчёт #38", "owner_id": "koder", "output": "итоги ДЗ → D в ВК + БД", "status": "live" }
+      ]
+    },
+    {
+      "id": "trainer", "name": "Тренажёр / бот", "stream": "продукт", "caption": "банк → бот → VPS → ученик",
+      "stages": [
+        { "ord": 1, "name": "Банк BANK.jsonl", "owner_id": "metodist", "output": "архетипы + клоны", "status": "ok" },
+        { "ord": 2, "name": "Бот (Python)", "owner_id": "koder", "output": "тренажёр-самоотработка", "status": "ok" },
+        { "ord": 3, "name": "VPS 24/7", "owner_id": null, "output": "живой сервис", "status": "live" },
+        { "ord": 4, "name": "Ученик", "owner_id": null, "output": "прорешивает до 100%", "status": "wait" }
+      ]
+    },
+    {
+      "id": "cards", "name": "Пособия / карточки", "stream": "продукт", "caption": "источник → банк → карточка → PDF",
+      "stages": [
+        { "ord": 1, "name": "Источник (Ширяева)", "owner_id": null, "output": "PDF прототипов", "status": "ok" },
+        { "ord": 2, "name": "Архетипы → банк", "owner_id": "metodist", "output": "BANK.jsonl", "status": "ok" },
+        { "ord": 3, "name": "HTML-карточка", "owner_id": "metodist", "output": "урок + ДЗ", "status": "ok" },
+        { "ord": 4, "name": "PDF (цвет + ЧБ)", "owner_id": "metodist", "output": "печатный материал", "status": "ok" }
+      ]
+    }
+  ],
+  "tasks": [
+    { "id": 34, "ext_id": "#34", "title": "Программы спринтов 8→9", "owner_id": "metodist", "stream": "продукт", "status": "paused" },
+    { "id": 35, "ext_id": "#35", "title": "Оффер «пересдача ОГЭ»", "owner_id": "atlas", "stream": "продукт", "status": "todo" },
+    { "id": 33, "ext_id": "#33", "title": "Бот: лид-воронка Авито + диагностика", "owner_id": "koder", "stream": "продукт", "status": "doing" },
+    { "id": 41, "ext_id": "#41", "title": "Штаб-Мостик (этот дашборд)", "owner_id": "ilon", "stream": "продукт", "status": "doing" },
+    { "id": 40, "ext_id": "#40", "title": "Ребренд Di → D.", "owner_id": "lemma", "stream": "контент", "status": "doing" },
+    { "id": 32, "ext_id": "#32", "title": "Авито лето: карусель + текст", "owner_id": "lemma", "stream": "трафик", "status": "done" },
+    { "id": 31, "ext_id": "#31", "title": "Тренажёр v1 на проде", "owner_id": "koder", "stream": "продукт", "status": "done" },
+    { "id": 37, "ext_id": "#37", "title": "Живой квиз на проде", "owner_id": "koder", "stream": "продукт", "status": "done" },
+    { "id": 38, "ext_id": "#38", "title": "Автоотчёт по домашкам", "owner_id": "koder", "stream": "продукт", "status": "done" },
+    { "id": 39, "ext_id": "#39", "title": "Кабинет родителя в боте", "owner_id": "koder", "stream": "продукт", "status": "done" }
+  ]
+}
