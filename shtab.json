@@ -97,14 +97,14 @@
     },
     {
       "id": "koder", "name": "Кодер", "glyph": "💻", "role": "веб · бот", "stream": "продукт",
-      "status": "active", "last_active": "2026-07-02", "is_personal": false, "depth_lines": 276,
+      "status": "active", "last_active": "2026-09-25", "is_personal": false, "depth_lines": 276,
       "caption": "веб-интерактивы (Pages) + Python-бот на VPS 24/7",
       "impact": [
-        { "label": "веб на проде", "value": 7, "funnel": true },
+        { "label": "веб на проде", "value": 18, "funnel": true },
         { "label": "бот 24/7", "value": 1, "unit": "✓" }
       ],
       "output": [
-        { "label": "веб-проекты (всего)", "cnt": 15 },
+        { "label": "веб-проекты (всего)", "cnt": 24 },
         { "label": "бот-модули .py", "cnt": 15 }
       ],
       "subs": [
